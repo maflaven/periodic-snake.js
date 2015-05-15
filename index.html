@@ -1,13 +1,26 @@
 <html>
   <head>
     <title>Periodic Snake</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
-    <canvas></canvas>
+    <div id="game">
+
+      <div id="statistics">
+        <div id="eat-timer">
+
+        </div>
+        <div id="high-score">
+
+        </div>
+      </div>
+
+      <canvas></canvas>
+
+    </div>
 
     <script type="application/javascript" src="vendor/keymaster.js"></script>
-    <script type="application/javascript" src="vendor/jquery.js"></script>
 
     <script type="application/javascript" src="lib/util.js"></script>
     <script type="application/javascript" src="lib/movingObject.js"></script>
@@ -20,13 +33,15 @@
 
     <script type="application/javascript">
       (function () {
+        var timer = document.getElementById("eat-timer");
+        var highScore = document.getElementById("high-score");
         var canvasEl = document.getElementsByTagName("canvas")[0];
         canvasEl.width = PSnake.Game.DIM_X;
         canvasEl.height = PSnake.Game.DIM_Y;
 
         var ctx = canvasEl.getContext("2d");
         var game = new PSnake.Game();
-        new PSnake.GameView(game, ctx).start();
+        new PSnake.GameView(game, ctx, timer, highScore).start();
       })();
     </script>
   </body>
