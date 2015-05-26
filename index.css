@@ -1,3 +1,7 @@
+* {
+  font-family: sans-serif;
+}
+
 #game {
   position: absolute;
   transform: translateX(-50%);
@@ -6,4 +10,72 @@
 
 #game > #statistics {
   position: absolute;
+  left: 1px;
+  top: 1px;
+  padding: 5px;
+  outline: 1px dashed black;
+}
+
+#game > #screens > * {
+  display: none;
+}
+
+#game > #screens > *.visible {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#screens > * > * {
+  opacity: 0.8;
+}
+
+#pause > div:nth-child(1) {
+  position: absolute;
+  background: #00c9a8;
+  transform: translateX(-60%);
+  left: 50%;
+  top: 15%;
+  font-size: 50px;
+}
+
+#pause > div:nth-child(2) {
+  position: absolute;
+  background: #00c9a8;
+  transform: translateX(-55%);
+  left: 50%;
+  top: 24.5%;
+  font-size: 30px;
+}
+
+#instructions {
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  background: #00c9a8;
+  border-right: 1px solid black;
+}
+
+#controls {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  background: #00c9a8;
+}
+
+#game-over > div:nth-child(1) {
+  position: absolute;
+  background: #00c9a8;
+  left: 37%;
+  top: 40%;
+  font-size: 50px;
+}
+
+#game-over > div:nth-child(2) {
+  position: absolute;
+  background: #00c9a8;
+  left: 33%;
+  top: 49.7%;
+  font-size: 30px;
 }

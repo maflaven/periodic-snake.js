@@ -7,22 +7,32 @@
   <body>
     <div id="game">
 
+      <div id="screens">
+        <div id="pause">
+          <div>paused</div>
+          <div>(press space to resume)</div>
+          <img id="instructions" src="lib/images/instructions.png"/>
+          <img id="controls" src="lib/images/controls.png"/>
+        </div>
+
+        <div id="game-over">
+          <div>game over</div>
+          <div>(press space to restart)</div>
+        </div>
+      </div>
+
       <div id="statistics">
-        <div id="eat-timer">
-
-        </div>
-        <div id="high-score">
-
-        </div>
+        <div id="eat-timer"></div>
+        <div id="high-score"></div>
       </div>
 
       <canvas></canvas>
 
     </div>
 
-    <audio src="lib/sounds/add.wav" preload="auto"></audio>
-    <audio src="lib/sounds/remove.wav" preload="auto"></audio>
-    <audio src="lib/sounds/shrink.wav" preload="auto"></audio>
+    <audio src="lib/audio/add.wav" preload="auto"></audio>
+    <audio src="lib/audio/remove.wav" preload="auto"></audio>
+    <audio src="lib/audio/shrink.wav" preload="auto"></audio>
 
     <script type="application/javascript" src="vendor/keymaster.js"></script>
 
@@ -38,6 +48,10 @@
     <script type="application/javascript">
       (function () {
         var audio = document.getElementsByTagName("audio");
+        var screens = [
+          document.getElementById("pause"),
+          document.getElementById("game-over")
+        ];
         var timer = document.getElementById("eat-timer");
         var highScore = document.getElementById("high-score");
         var canvasEl = document.getElementsByTagName("canvas")[0];
@@ -46,7 +60,9 @@
 
         var ctx = canvasEl.getContext("2d");
         var game = new PSnake.Game(audio);
-        new PSnake.GameView(game, ctx, timer, highScore).start();
+        var gameView = new PSnake.GameView(game, ctx, timer, highScore, screens);
+        gameView.start();
+        setTimeout(gameView.togglePause.bind(gameView), 1000 / PSnake.Game.FPS);
       })();
     </script>
   </body>
