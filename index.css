@@ -1,17 +1,22 @@
+body {
+  background: rgb(77, 77, 77);
+}
+
 * {
   font-family: sans-serif;
 }
 
 #game {
-  position: absolute;
-  transform: translateX(-50%);
-  left: 50%;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 0 80px black;
 }
 
 #game > #statistics {
   position: absolute;
-  left: 1px;
-  top: 1px;
   padding: 5px;
   outline: 1px dashed black;
 }
@@ -35,7 +40,7 @@
   position: absolute;
   background: #00c9a8;
   transform: translateX(-60%);
-  left: 50%;
+  left: 50.8%;
   top: 15%;
   font-size: 50px;
 }
