@@ -1,5 +1,5 @@
 {
-  "name": "Periodic Snake",
+  "name": "Periodic-Snake",
   "description": "Periodic Snake",
   "main": "server.js",
   "scripts": {
