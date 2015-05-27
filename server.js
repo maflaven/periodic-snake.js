@@ -1,4 +1,4 @@
-require('node_modules/newrelic/newrelic')
+require('newrelic')
 var express = require('express');
 var app = express();
 
