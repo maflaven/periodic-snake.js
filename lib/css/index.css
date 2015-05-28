@@ -22,6 +22,7 @@ body {
   position: absolute;
   padding: 5px;
   outline: 1px dashed black;
+  font-size: 25x;
 }
 
 #game > #screens > * {
