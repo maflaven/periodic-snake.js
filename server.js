@@ -3,8 +3,9 @@ var express = require('express');
 var app = express();
 
 // set the favicon
-// var favicon = require('serve-favicon');
-app.use(express.favicon(__dirname + '/lib/images/favicon.ico'));
+var path = require('path');
+var favicon = require('serve-favicon');
+app.use(favicon(path.join(__dirname,'lib','images','favicon.ico')));
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -24,5 +25,5 @@ app.get('/', function(req, res) {
 });
 
 app.listen(port, function() {
-	console.log('Our app is running on http://localhost:' + port);
+	console.log('Running on http://localhost:' + port);
 });
