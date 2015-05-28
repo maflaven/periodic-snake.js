@@ -3,8 +3,8 @@ var express = require('express');
 var app = express();
 
 // set the favicon
-var favicon = require('serve-favicon');
-app.use(favicon(__dirname + '/lib/images/favicon.ico'));
+// var favicon = require('serve-favicon');
+app.use(express.favicon(__dirname + '/lib/images/favicon.ico'));
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
