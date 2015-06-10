@@ -61,7 +61,7 @@ body {
 #instructions {
   position: absolute;
   left: 10%;
-  bottom: 10%;
+  bottom: 5%;
   background: #00c9a8;
   border-right: 1px solid black;
 }
