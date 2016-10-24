@@ -8,7 +8,7 @@ Periodic Snake is a pure JavaScript game based on Snake; however, there are some
 ###Technical Features
 * Node.js
 * Custom 8-bit sounds
-* Snake movement and path projection are sin-wave based
+* Snake movement and path projection are sine-wave based
 * Custom transitions
 
 ###Planned Upgrades
