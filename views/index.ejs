@@ -72,7 +72,7 @@
 
         var ctx = canvasEl.getContext("2d");
         var game = new PSnake.Game(audio);
-        var gameView = new PSnake.GameView(game, ctx, timer, highScore, screens);
+        var gameView = window.gameView = new PSnake.GameView(game, ctx, timer, highScore, screens);
         gameView.start();
         setTimeout(gameView.togglePause.bind(gameView), 1000 / PSnake.Game.FPS);
       })();
