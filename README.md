@@ -1,5 +1,5 @@
 #Periodic Snake
-Periodic Snake is a pure JavaScript game based on Snake; however, there are some key differences:
+Periodic Snake is a pure JavaScript game based on Snake, but there are some key differences:
 * Movement is from left to right, in a wavelike manner
 * Controls modify the snake's amplitude and wavelength
 * The snake grows by absorbing same-colored circles, and it shrinks by colliding with spikes
