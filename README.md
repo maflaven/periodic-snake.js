@@ -13,5 +13,6 @@ Periodic Snake is a pure JavaScript game based on Snake, but there are some key 
 
 ###Planned Upgrades
 - [ ] Difficulty levels: one spike collision either kills (HARD) or cuts the snake in half (EASY, current default difficulty)
-- [ ] High Score Board
+- [ ] Score board
 - [ ] Ripple graphics accompanying all motion
+- [ ] Mouse controls
